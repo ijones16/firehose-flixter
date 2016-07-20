@@ -1,5 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+$footer-height: 100px;
+
+
+html,
+body {
+  height: 100%;
+}
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
@@ -8,6 +15,17 @@ h1, h2, h3, h4, h5, h6, .navbar {
 body {
   background: url('bg.png');
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -$footer-height;
+  padding: 0 0 $footer-height;
+}
+
+.clear {
+  clear: both;
 }
 
 .nav.navbar {
@@ -23,11 +41,21 @@ body {
   display: flex;
   flex-direction: row;
 
-  h4 {
+  ul {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     align-items: center;
+    margin-right: 5px;
+
+    li a {
+      color: white;
+
+      &:hover{
+        background-color: black;
+        color: #667c91;
+      }
+    }
   }
 }
 
@@ -65,4 +93,19 @@ body {
 
 .btn {
   border-radius: 0;
+}
+
+.booyah-box {
+  font-family: "Helvetica Neue", Helvetica;
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 10px;
+}
+
+.booyah-box h2, .booyah-box h1 {
+  margin:10px;
 }

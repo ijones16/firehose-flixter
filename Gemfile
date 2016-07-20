@@ -6,7 +6,7 @@ gem 'rails', '4.0.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-# Use SCSS for stylesheets
+# Use SCSS for stylesheets with Bootstrap
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
 gem 'sass-rails'
@@ -32,6 +32,12 @@ gem 'jbuilder', '~> 1.2'
 
 # 12_factor for Heroku
 gem 'rails_12factor', group: :production
+
+# Devise handles user authentication
+gem 'devise', '>= 3.2.4'
+
+# Simple form for rails forms
+gem 'simple_form'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

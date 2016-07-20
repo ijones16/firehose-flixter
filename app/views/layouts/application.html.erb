@@ -7,14 +7,39 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="nav navbar">
-  <div class="nav-links">
-    <a class="navbar-brand">Flixter</a>
-    <h4>link</h4>
-  </div>
-</nav>
 
-<%= yield %>
+<div id="wrap">
+  <nav class="nav navbar">
+    <div class="nav-links">
+      <%= link_to 'Flixter', root_url, class: 'navbar-brand' %>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'Sign in', new_user_session_path %></li>
+          <li><%= link_to 'Sign up', new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+  <% if notice.present? %>
+    <p class="alert alert-info"><%= notice %></p>
+  <% end %>
+  <% if alert.present? %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
+  <%= yield %>
+</div>
+
+<br class="clear">
+<div id="footer">
+  <div class="container">
+    <b>Footer Here</b>
+    <br>
+    <%= link_to 'Link', '#' %>
+  </div>
+</div>
 
 </body>
 </html>
