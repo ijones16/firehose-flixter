@@ -45,6 +45,8 @@ gem 'carrierwave'
 gem 'fog'
 # Image Processing
 gem 'mini_magick', '~> 4.3.1'
+# better video uploader
+gem 'carrierwave-aws'
 
 # AWS access
 gem 'figaro'
