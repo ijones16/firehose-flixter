@@ -14,6 +14,13 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
-
+# Ignore application configuration
 /config/application.yml
+
+.idea
+.env
+.env*
+.rbenv-version
+.DS_Store
+\#*
+.#*
