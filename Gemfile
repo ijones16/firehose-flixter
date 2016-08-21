@@ -51,6 +51,9 @@ gem 'carrierwave-aws'
 # AWS access
 gem 'figaro'
 
+# Order sections and lessons
+gem 'ranked-model'
+
 # Handles payments
 gem 'stripe'
 
