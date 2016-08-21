@@ -16,4 +16,4 @@
 /tmp
 
 
-application.yml
+/config/application.yml
